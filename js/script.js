@@ -134,6 +134,8 @@ let incr = 10,
 
 // (num === 61) ? console.log('yes') : console.log('no');
 
+
+// условия
 const num = 50;
 
 switch (num) {
@@ -146,4 +148,39 @@ switch (num) {
     default:
         console.log('noo!');
         break;
+}
+
+// циклы
+
+let numb = 50;
+
+// var 1
+while (numb <= 55) {
+    console.log(numb);
+    numb++;
+}
+
+
+
+// var 2
+do {
+    console.log(numb);
+    numb++;
+}
+while(numb<60);
+
+
+// var 3
+for (let i= 1; i < 8; i++) {
+
+    if (i == 6) {
+        // прерываем
+        break;
+
+    } else if (i == 2) {
+        // пропускаем
+        continue;
+    }
+     
+    console.log(i);
 }
