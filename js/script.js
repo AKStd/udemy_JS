@@ -61,31 +61,31 @@ const str = `today is ${len}`;
 let incr = 10,
     decr = 10;
 
-    // incr++;
-    // decr--;
-    // постфикс - возращает текущее значение и увеличивает 
-    // префикс - возвращает измененое значение сразу
+// incr++;
+// decr--;
+// постфикс - возращает текущее значение и увеличивает 
+// префикс - возвращает измененое значение сразу
     ++incr;
     --decr;
     console.log(incr);
     console.log(decr);
     
-    // остаток от деления %
+// остаток от деления %
     console.log(5%2);
-    // нестрогое сравнение
+// нестрогое сравнение
     console.log(2*4 == '8'); // даст true
     console.log(2*4 == 8); // даст true
 
 
-    //строгое сравнение
+//строгое сравнение
     console.log(2*4 === '8'); // даст false
     console.log(2*4 == 8); // даст true
 
 
-    // сравнение 
-    // || - или
-    // && - и 
-    // ! - отрицание
+// сравнение 
+// || - или
+// && - и 
+// ! - отрицание
 
 
     let isChecked = true,
@@ -96,10 +96,54 @@ let incr = 10,
 
 // GIT
 // git init
+
 // установка локальных данных в репе
 // git config --local user.name "your_name"
 // git config --local user.email "your_email"
+
+// добавить файды в КВ
+// git add A
+
+// сам коммит
+// git commit -m"your_message
+
+// логи комитов
+// git log
+
+// добавляеи ссыль на наш реп
+// git remote add origin {url}
+
+// пушинг -u всегда сюда в репу origin в ветку master
+// git push -u origin master
 //
-//
-//
-//
+
+
+// let num = 60;
+
+
+// if (num < 50) {
+//     console.log('no', num);
+//     num++;
+// } else if (num < 60) {
+//     console.log('no', num);
+// } else {
+//     console.log('yes');
+// }
+
+// console.log('num -', num)
+
+// (num === 61) ? console.log('yes') : console.log('no');
+
+const num = 50;
+
+switch (num) {
+    case 49: 
+        console.log('num is 49');
+        break;
+    case 50:
+        console.log('num is 50');
+        break;
+    default:
+        console.log('noo!');
+        break;
+}
