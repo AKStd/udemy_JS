@@ -25,6 +25,10 @@ function isItNull(strg) {
     
 }
 
+
+console.log(isItNull(null));
+
+
 for  (let i = 0; i < 2; i++) {
     let lastMovieTitle = prompt('последний фильм?' , ''),
         lastMovieRate = prompt(`как оценишь ${lastMovieTitle}?` ,'');
@@ -40,3 +44,40 @@ for  (let i = 0; i < 2; i++) {
 
 }
 console.log(personalMovieDB);
+
+
+// funcs:
+
+// functin declaration ()
+// создается до начала выполнения в скрипте, можно вызвать перед объявлением
+//
+function isItNull(strg) {
+    if (strg == null) {
+        return false;
+    } else if (strg == ''){
+        return false;
+    } else if (strg.lenght >= 50) {
+        return false;
+    } else {
+        return true;
+    }
+    
+}
+
+
+console.log(isItNull(null));
+
+
+// fuction expression 
+// создается только тогда, когда доходит поток кода, можно вызвать только после объявления
+
+let jet = function() {
+    console.log('this is func declaration');
+};
+
+jet();
+
+// стрелочная функция 
+
+
+const calc = (a, b) => a + b;
