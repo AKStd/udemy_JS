@@ -184,3 +184,23 @@ for (let i= 1; i < 8; i++) {
      
     console.log(i);
 }
+
+
+// Методы строк
+
+
+let strg = 'text_and_text';
+
+
+console.log(strg.slice(0,3));
+console.log(strg.substring(3,6));
+
+const _number = 12;
+console.log(Math.round(_number));
+
+const _test = '12.2px';
+
+
+console.log(parseInt(_test));
+console.log(parseFloat(_test));
+
