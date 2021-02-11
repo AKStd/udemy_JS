@@ -80,3 +80,7 @@ jet();
 // стрелочная функция 
 
 const calc = (a, b) => a + b;
+
+
+var x = 1 == '1';
+console.log(x);
