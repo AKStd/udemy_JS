@@ -31,5 +31,3 @@ function RecIter(obj) {
 
     }
 }
-
-RecIter(options);
