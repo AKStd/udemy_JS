@@ -28,10 +28,10 @@ function copyObject(mainDB) {
 
     let key;
     for (key in mainDB) {
-        console.log(`${key} - ${(typeof key)}`);
-        if ((typeof key) == 'object') {
+        console.log(`${key} - ${typeof(key)}`);
+        if (typeof(mainDB[key]) == 'object') {
             console.log(key, 'here the object in object');
-            copyObject(key);
+            copyObj[key] = copyObject(mainDB[key]);
         } else {
             copyObj[key] = mainDB[key];
         }
