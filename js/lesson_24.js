@@ -12,19 +12,22 @@ let personalMovieDB = {
         let numberOffilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
         while (numberOffilms == '' || numberOffilms == null || isNaN(numberOffilms)) {
             numberOffilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
-            this.count = numberOffilms;
         }
+        this.count = numberOffilms;
+        return this.count;
     },
 
     rememberMyFilms: function() {
-        for (let i =0; i<this.count; i++) {
-            const a = prompt('Последний фильм?', ''),
-                  b = prompt('На сколько его оцените?', '');
-            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-                this.movies[a] = b;
-                console.log('Done with', a);
+        for (let i =0; i < this.count; i++) {
+            const movie = prompt('Последний фильм?', ''),
+                  rate = prompt('На сколько его оцените?', '');
+            if (movie != null && rate != null && movie != '' && rate != '' && movie.length < 50) {
+                this.movies[movie] = rate;
+                console.log('Done with', movie);
+                return `movie ${movie} - rate ${rate}`;
             } else {
-                console.log('Something wrong with', a);
+                console.log('Something wrong with', movie);
+                let exception = `Something wrong with ${movie}`;
                 i--;
             }
         }
@@ -52,11 +55,21 @@ let personalMovieDB = {
         this.privat = !this.privat;
     },
 
+    
+    writeYourGenres: function() {
+        for (let i=0; i<3; i++) {
+            let genre = prompt(`${i+1} место среди Ваших любимых жанров?`);
+            if (genre === '' || genre == null) {
+                console.log('введены некорректные данные');
+                i--;
+            } else {
+                this.genres[i] = genre; 
+            }
+        }
+        this.genres.forEach((item, i) => {
+            console.log(`${i+1} - ${item}`);
+        }
+        );
+    },
+
 };
-
-
-for (let i = 0; i < 3;i++) {
-    console.log(`privat - ${personalMovieDB.privat}`);
-    console.log('toggle this');
-    personalMovieDB.toggleVisibleMyDB();
-}
