@@ -1,7 +1,7 @@
 "use strict";
 
 let str = 'some';
-let strObject = new String(str);
+// let strObject = new String(str);
 
 
 // смотри наследование
@@ -25,7 +25,7 @@ const Jax = {
     health:400
 };
 
-Jax.__proto__ = soldier;
+// Jax.__proto__ = soldier;
 
 console.log(Jax);
 // but
