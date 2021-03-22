@@ -24,3 +24,27 @@ const movieDB = {
     ]
 };
 
+// задание 1
+const adv = document.querySelectorAll('.promo__adv img');
+adv.forEach(item =>{
+    item.remove();
+});
+
+const genre = document.querySelector('.promo__content .promo__genre');
+genre.textContent = 'Драма';
+
+const background = document.querySelector('.promo__bg');
+background.style.backgroundImage = 'url(img/bg.jpg)';
+
+const movieList = document.querySelector('.promo__interactive-list');
+
+movieList.innerHTML = '';
+
+movieDB.movies.sort();
+movieDB.movies.forEach((movie, i) => {
+    movieList.innerHTML += `
+    <li class="promo__interactive-item">${i+1}: ${movie}
+        <div class="delete"></div>
+    </li>
+    `;
+});
